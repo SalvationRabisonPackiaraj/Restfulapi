@@ -1,18 +1,14 @@
 package com.salvation.restapi.service.impl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.salvation.restapi.entity.Department;
 import com.salvation.restapi.entity.Employee;
 import com.salvation.restapi.exception.ResourceNotFoundException;
-import com.salvation.restapi.repository.DepartmentRepository;
 import com.salvation.restapi.repository.EmployeeRepository;
 import com.salvation.restapi.service.EmployeeService;
 
 
 import java.util.List;
-import java.util.Set;
 
 
 @Service
@@ -20,9 +16,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 	private EmployeeRepository employeeRepository;
 	
-	@Autowired
-	private DepartmentRepository departmentRepository;
-	
+
 	public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
 		super();
 		this.employeeRepository = employeeRepository;
